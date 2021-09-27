@@ -26,7 +26,7 @@ public class Life : MonoBehaviour
                 //Destroy(gameObject);
 
               
-                Destroy(gameObject,1);
+                Destroy(gameObject,2);
             }
             
         }
