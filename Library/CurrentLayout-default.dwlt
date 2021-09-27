@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 685
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 677, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 76
@@ -232,7 +232,7 @@ MonoBehaviour:
     y: 0
     width: 1066
     height: 635
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 77
@@ -257,8 +257,8 @@ MonoBehaviour:
     y: 0
     width: 1066
     height: 364
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 78
 --- !u!114 &11
@@ -280,8 +280,8 @@ MonoBehaviour:
     y: 0
     width: 781
     height: 364
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 28}
   m_Panes:
   - {fileID: 28}
@@ -2696,21 +2696,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/_Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/_Scripts
   m_LastFoldersGridSize: 80
   m_LastProjectPath: C:\Users\Boris\Documents\curso unity\Shooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 139}
-    m_SelectedIDs: 02660000
-    m_LastClickedID: 26114
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f0650000
+    m_LastClickedID: 26096
     m_ExpandedIDs: 00000000886500008a6500008c6500008e65000090650000926500009465000096650000986500009a6500009c6500009e650000a0650000a2650000a465000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 400
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -2859,9 +2859,9 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa570000
-      m_LastClickedID: 22522
+      scrollPos: {x: 0, y: 174}
+      m_SelectedIDs: 94ccffff
+      m_LastClickedID: -13164
       m_ExpandedIDs: 4efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -2922,9 +2922,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 80.58952, y: 54.076008, z: 56.991436}
+    m_Target: {x: -143.62254, y: -290.3735, z: 737.4021}
     speed: 2
-    m_Value: {x: 80.58952, y: 54.076008, z: 56.991436}
+    m_Value: {x: -143.62254, y: -290.3735, z: 737.4021}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2971,13 +2971,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08224887, y: -0.86781275, z: 0.15334277, w: 0.46544325}
+    m_Target: {x: 0.22176199, y: -0.13696614, z: 0.031467296, w: 0.96493196}
     speed: 2
-    m_Value: {x: 0.08224824, y: -0.86780614, z: 0.15334159, w: 0.4654397}
+    m_Value: {x: 0.22175956, y: -0.13696463, z: 0.03146695, w: 0.96492136}
   m_Size:
-    m_Target: 1.4419644
+    m_Target: 400
     speed: 2
-    m_Value: 1.4419644
+    m_Value: 400
   m_Ortho:
     m_Target: 0
     speed: 2
