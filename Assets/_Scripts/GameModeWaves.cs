@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameModeWaves : MonoBehaviour
 {
@@ -19,13 +20,13 @@ public class GameModeWaves : MonoBehaviour
         if (EnemyManager.SharedInstance.enemies.Count <= 0 && 
             WaveManager.SharedInstance.waves.Count <= 0)
         {
-            Debug.Log("Hemos ganado");
+            SceneManager.LoadScene("LoseScene",LoadSceneMode.Single);
         }
         //Perder
 
         if (playerLife.Amount <=0)
         {
-            Debug.Log("Hemos Perdido");
+                SceneManager.LoadScene("WinScene",LoadSceneMode.Single);
         }
     }
 }
