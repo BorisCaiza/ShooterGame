@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoDestroy : MonoBehaviour
+public class Autodestroy : MonoBehaviour
 {
     [Tooltip("Tiempo después del cual se destruye el objeto")]
     public float destructionDelay;
@@ -13,11 +13,8 @@ public class AutoDestroy : MonoBehaviour
         Invoke("HideObject", destructionDelay);
     }
 
-    void HideObject()
+    private void HideObject()
     {
         gameObject.SetActive(false);
     }
-
-    // Update is called once per frame
-    
 }

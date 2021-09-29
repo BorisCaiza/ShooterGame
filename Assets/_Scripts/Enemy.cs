@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
    {
       EnemyManager.SharedInstance.enemies.Add(this);
    }
+   
+   
 
    private void OnDestroy()
    {

@@ -19,8 +19,9 @@ public class WaveSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WaveManager.SharedInstance.waves.Add(this);
         InvokeRepeating("SpawnEnemey",startTime, spawnRate);
-        Invoke("CancelInvoke",endTime);
+        Invoke("EndWave",endTime);
     }
 
     // Update is called once per frame
@@ -33,5 +34,10 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(prefab, transform.position, transform.rotation);
         
     }
-    
+
+    void EndWave()
+    {
+        WaveManager.SharedInstance.waves.Remove(this);
+        CancelInvoke();
+    }
 }
