@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,26 +8,38 @@ public class GameModeWaves : MonoBehaviour
 {
     [SerializeField]
     private Life playerLife;
+    
+    [SerializeField]
+    private Life baseLife;
+    
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+       playerLife.onDeath.AddListener(CheckLoseCondition);
+       baseLife.onDeath.AddListener(CheckLoseCondition);
+       
+       EnemyManager.SharedInstance.onEnemyChanged.AddListener(CheckWinCondition);
+       WaveManager.SharedInstance.onWaveChanged.AddListener(CheckWinCondition);
+    }
+
+    void CheckLoseCondition()
+    {
+        //Perder
+
+        
+            SceneManager.LoadScene("WinScene",LoadSceneMode.Single);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void CheckWinCondition()
     {
         //Ganar
-        if (EnemyManager.SharedInstance.enemies.Count <= 0 && 
-            WaveManager.SharedInstance.waves.Count <= 0)
+        if (EnemyManager.SharedInstance.GetEnemyCount <= 0 && 
+            WaveManager.SharedInstance.WavesCount <= 0)
         {
             SceneManager.LoadScene("LoseScene",LoadSceneMode.Single);
         }
-        //Perder
-
-        if (playerLife.Amount <=0)
-        {
-                SceneManager.LoadScene("WinScene",LoadSceneMode.Single);
-        }
     }
+
+   
 }
