@@ -6022,7 +6022,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.75628e+26, y: NaN, z: 6.889133e+11, w: 7.3982314e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -12181,6 +12181,7 @@ GameObject:
   - component: {fileID: 1375119209}
   - component: {fileID: 1375119211}
   - component: {fileID: 1375119210}
+  - component: {fileID: 1375119212}
   m_Layer: 5
   m_Name: Lifebar
   m_TagString: Untagged
@@ -12245,6 +12246,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375119208}
   m_CullTransparentMesh: 1
+--- !u!114 &1375119212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375119208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d90ccc5c6da0a442813fd229f9968ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLife: {fileID: 567282378}
 --- !u!1 &1401693005
 GameObject:
   m_ObjectHideFlags: 0
@@ -15988,6 +16002,7 @@ GameObject:
   - component: {fileID: 2028666242}
   - component: {fileID: 2028666244}
   - component: {fileID: 2028666243}
+  - component: {fileID: 2028666245}
   m_Layer: 5
   m_Name: Lifebar
   m_TagString: Untagged
@@ -16052,6 +16067,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028666241}
   m_CullTransparentMesh: 1
+--- !u!114 &2028666245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028666241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d90ccc5c6da0a442813fd229f9968ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLife: {fileID: 669774686}
 --- !u!1 &2055268374
 GameObject:
   m_ObjectHideFlags: 0
@@ -17194,6 +17222,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2435297348187848563, guid: 0bfa57b9bb6aa304d808750838b94f1d, type: 3}
       propertyPath: amount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435297348187848563, guid: 0bfa57b9bb6aa304d808750838b94f1d, type: 3}
+      propertyPath: maximumLife
       value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
