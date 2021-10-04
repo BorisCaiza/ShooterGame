@@ -2,16 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool SharedInstance; //Null, conjunto vacio no asignado
+    public static ObjectPool SharedInstance; 
 
     public GameObject prefab;
-    
+
     public List<GameObject> pooledObjects;
-    
+
     public int amountToPool;
 
     private void Awake()
@@ -22,10 +21,11 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Ya hay otro pool en pantalla");
+            Debug.LogError("YA HAY OTRO POOL EN PANTALLA");
             Destroy(gameObject);
         }
     }
+
 
     private void Start()
     {
@@ -37,7 +37,6 @@ public class ObjectPool : MonoBehaviour
             tmp.SetActive(false);
             pooledObjects.Add(tmp);
         }
-        
     }
 
     public GameObject GetFirstPooledObject()
@@ -52,5 +51,5 @@ public class ObjectPool : MonoBehaviour
 
         return null;
     }
-
+    
 }
