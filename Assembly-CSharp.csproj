@@ -70,6 +70,10 @@
      <Compile Include="Assets\_Scripts\AutoDestroy.cs" />
      <Compile Include="Assets\_Scripts\EnemyManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerBulletsUI.cs" />
+     <Compile Include="Assets\_Scripts\ScoreUI.cs" />
+     <Compile Include="Assets\_Scripts\EnemiesUI.cs" />
+     <Compile Include="Assets\_Scripts\WavesUI.cs" />
+     <Compile Include="Assets\_Scripts\Pause.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

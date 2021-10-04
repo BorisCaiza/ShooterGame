@@ -13,7 +13,7 @@ public class GameModeWaves : MonoBehaviour
     private Life baseLife;
     
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
        playerLife.onDeath.AddListener(CheckLoseCondition);
        baseLife.onDeath.AddListener(CheckLoseCondition);
