@@ -13,6 +13,8 @@ public class PlayerShooting : MonoBehaviour
     public GameObject shootingPoint;
     private Animator _animator;
 
+    public int bulletsAmount;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -22,11 +24,16 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) )
         {
          
             _animator.SetTrigger("Shot Bullet");
-            Invoke("FireBullet",0.4f);
+            if (bulletsAmount > 0)
+            {
+                Invoke("FireBullet",0.4f);    
+            }
+
+           
            
 
         }
@@ -40,6 +47,7 @@ public class PlayerShooting : MonoBehaviour
         bullet.transform.position = shootingPoint.transform.position;
         bullet.transform.rotation = shootingPoint.transform.rotation;
         bullet.SetActive(true);
-        
+        bulletsAmount--;
+
     }
 }
