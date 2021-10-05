@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
       
        _animator.SetFloat("Velocity",_rb.velocity.magnitude);
 
-       if (Input.GetKeyDown(KeyCode.Space))
+       if (Input.GetKey(KeyCode.Space))
        {
            _animator2.SetTrigger("Jump");   
        }
