@@ -4285,7 +4285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701470232}
   m_LocalRotation: {x: -0, y: -0.36907217, z: -0, w: 0.9294008}
-  m_LocalPosition: {x: 79.97, y: 53.55, z: 36.23}
+  m_LocalPosition: {x: 79.97, y: 54.13, z: 36.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5785,7 +5785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4029507127377068615, guid: 3803bd0fbf4fd9843b40e94f4cbbe9eb, type: 3}
   pooledObjects: []
-  amountToPool: 50
+  amountToPool: 100
 --- !u!4 &915858349
 Transform:
   m_ObjectHideFlags: 0
@@ -5864,7 +5864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942061551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.466686, y: 52.89, z: 36.23}
+  m_LocalPosition: {x: 60.466686, y: 54.11, z: 36.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
