@@ -66,8 +66,12 @@ public class PlayerShooting : MonoBehaviour
             bullet.transform.position = shootingPoint.transform.position;
             bullet.transform.rotation = shootingPoint.transform.rotation;
             bullet.SetActive(true);
-        
-            fireEffect.Play();
+            if (fireEffect != null)
+            {
+                fireEffect.Play();
+            }
+
+            
             Instantiate(shootShound, transform.position, transform.rotation).GetComponent<AudioSource>().Play();
             // shootShound.Play();
         

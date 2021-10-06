@@ -10,7 +10,7 @@ public class Life : MonoBehaviour
     private float amount;
 
     public float maximumLife = 100f;
-    
+
 
     public UnityEvent onDeath;
 

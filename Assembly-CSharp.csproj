@@ -55,6 +55,7 @@
      <Compile Include="Assets\_Scripts\Enemy.cs" />
      <Compile Include="Assets\_Scripts\ScoreManager.cs" />
      <Compile Include="Assets\_Scripts\EnemiesUI.cs" />
+     <Compile Include="Assets\_Scripts\NavMeshAnimator.cs" />
      <Compile Include="Assets\_Scripts\LifeBar.cs" />
      <Compile Include="Assets\_Scripts\PlayerShooting.cs" />
      <Compile Include="Assets\_Scripts\EnemyFSM.cs" />
