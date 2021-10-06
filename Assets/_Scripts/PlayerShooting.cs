@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerShooting : MonoBehaviour
@@ -54,6 +55,11 @@ public class PlayerShooting : MonoBehaviour
         else
         {
             _animator.SetBool("Shot Bullet Bool", false);
+        }
+
+        if (bulletsAmount == 0)
+        {
+            SceneManager.LoadScene("");
         }
     }
 

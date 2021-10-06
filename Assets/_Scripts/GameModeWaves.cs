@@ -23,7 +23,9 @@ public class GameModeWaves : MonoBehaviour
     }
 
     void CheckLoseCondition()
+    
     {
+       // RegisterScore();
         //Perder
 
         
@@ -33,13 +35,45 @@ public class GameModeWaves : MonoBehaviour
 
     void CheckWinCondition()
     {
+        RegisterScore();
         //Ganar
         if (EnemyManager.SharedInstance.GetEnemyCount <= 0 && 
             WaveManager.SharedInstance.WavesCount <= 0)
         {
+            RegisterScore();
+            RegisterTime();
+            
             SceneManager.LoadScene("LoseScene",LoadSceneMode.Single);
         }
     }
 
-   
+
+    void RegisterScore()
+    {
+        var actualScore = ScoreManager.SharedInstance.Amount;
+        PlayerPrefs.SetInt("Last Score",actualScore);
+
+        var highScore = PlayerPrefs.GetInt("High Score",0);
+
+        if (actualScore > highScore)
+        {
+            PlayerPrefs.SetInt("High Score", actualScore);
+        }
+    }
+    
+    void RegisterTime()
+    {
+        var actualTime = Time.time;
+        PlayerPrefs.SetFloat("Last Time",actualTime);
+
+        var lowTime = PlayerPrefs.GetFloat("Low Time",99999999.0f);
+
+        if (actualTime < lowTime)
+        {
+            PlayerPrefs.SetFloat("Low Time", actualTime);
+        }
+    }
+
+
+
 }

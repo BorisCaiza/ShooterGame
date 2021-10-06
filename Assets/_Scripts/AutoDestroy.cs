@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Autodestroy : MonoBehaviour
+public class AutoDestroy : MonoBehaviour
 {
     [Tooltip("Tiempo después del cual se destruye el objeto")]
     public float destructionDelay;
