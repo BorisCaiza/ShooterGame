@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-       // Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
         _animator2 = GetComponent<Animator>();

@@ -25,8 +25,8 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-          //  Cursor.visible = true;
-           // Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             
             
             Time.timeScale = 0;
@@ -47,8 +47,8 @@ public class Pause : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
-      //  Cursor.visible = false;
-       // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
        gameSnp.TransitionTo(0.1f);
     }
 }

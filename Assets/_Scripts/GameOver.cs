@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
 
         if (playerHasWon)
         {
-            actualScore.text = "Actual Score: " + PlayerPrefs.GetInt("Last Score");
+            actualScore.text = string.Format("Actual Score: {0}", PlayerPrefs.GetInt("Last Score"));
             actualTime.text = "Time: " + PlayerPrefs.GetFloat("Last Time");
             bestScore.text = "Best: " + PlayerPrefs.GetInt("High Score");
             bestTime.text = "Best:: " + PlayerPrefs.GetFloat("Low Time");  

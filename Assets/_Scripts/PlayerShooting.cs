@@ -2,25 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
+using UnityEngine.Experimental.GlobalIllumination;
 
 
 public class PlayerShooting : MonoBehaviour
 {
-
-
-   
-    public GameObject shootingPoint;
-    public ParticleSystem fireEffect;
-    public AudioSource shootShound;
+    
     private Animator _animator;
 
     public int bulletsAmount;
 
-    private float fireRate = 0.5f;
-    private float lastShootTime;
-
+    public Weapon weapon;
+    
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -30,67 +23,27 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.timeScale > 0 )
+
+        if (Input.GetKey(KeyCode.Mouse0) && Time.timeScale > 0)
         {
-         
-           // _animator.SetTrigger("Shot Bullet");
-           _animator.SetBool("Shot Bullet Bool", true);
-            if (bulletsAmount > 0)
+            _animator.SetBool("Shot Bullet Bool", true);
+            
+            if (bulletsAmount> 0 && weapon.ShootBullet("Player Bullet", 0.25f))
             {
-                var timeSinceLastShoot = Time.time - lastShootTime;
-                if (timeSinceLastShoot < fireRate)
+                bulletsAmount--;
+                if (bulletsAmount<0)
                 {
-                    return;
+                    bulletsAmount = 0;
                 }
-
-                lastShootTime = Time.time;
-
-                Invoke("FireBullet",0.2f);    
-            }
-            else
+            } else
             {
-                //TODO: Aqui no tengo balas, buscar algo con que instanciarlo.
+                //TODO: aqui no tengo balas, buscar sonido acorde a ello
             }
         }
         else
         {
             _animator.SetBool("Shot Bullet Bool", false);
         }
-
-        if (bulletsAmount == 0)
-        {
-            SceneManager.LoadScene("");
-        }
     }
 
-    void FireBullet()
-    {
-     
-      
-            GameObject bullet = ObjectPool.SharedInstance.GetFirstPooledObject();
-            bullet.layer = LayerMask.NameToLayer("Player Bullet");
-            bullet.transform.position = shootingPoint.transform.position;
-            bullet.transform.rotation = shootingPoint.transform.rotation;
-            bullet.SetActive(true);
-            if (fireEffect != null)
-            {
-                fireEffect.Play();
-            }
-
-            
-            Instantiate(shootShound, transform.position, transform.rotation).GetComponent<AudioSource>().Play();
-            // shootShound.Play();
-        
-            if (bulletsAmount < 0)
-            {
-                bulletsAmount = 0;
-            }
-            
-            bulletsAmount--;  
-        }
-
-      
-        
-
-    }
-
+}
